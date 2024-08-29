@@ -12,7 +12,7 @@ html, body {
 }
 
 #map {
-    width: 100%; 
+    width: 100%;
     height: 100%;
     float: left;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -22,7 +22,8 @@ html, body {
 .avatar-selection {
     position: absolute;
     top: 10px;
-    left: 600px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     background-color: #fff;
     padding: 15px;
@@ -35,7 +36,8 @@ html, body {
 .notification {
     position: absolute;
     top: 20px;
-    left: calc(50% - 150px); /* Center the notification */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -48,7 +50,8 @@ html, body {
 
 /* Chat box styling */
 .chat-box {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
@@ -117,4 +120,78 @@ html, body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .avatar-selection {
+        left: 10px;
+        right: 10px;
+        width: auto;
+        transform: none;
+        padding: 10px;
+    }
+
+    .notification {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        transform: none;
+        padding: 10px;
+    }
+
+    .chat-box {
+        width: calc(100% - 20px);
+        max-width: none;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #active-users {
+        right: 10px;
+        padding: 10px;
+    }
+
+    .chat-messages {
+        height: 100px;
+        padding: 8px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar-selection {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        padding: 8px;
+    }
+
+    .notification {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        padding: 8px;
+    }
+
+    .chat-box {
+        width: calc(100% - 10px);
+        padding: 8px;
+    }
+
+    #active-users {
+        right: 5px;
+        padding: 8px;
+    }
+
+    .chat-messages {
+        height: 80px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
 }
