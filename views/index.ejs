@@ -9,8 +9,30 @@
 </head>
 <body>
     <div id="map"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Avatar selection dropdown -->
+    <div class="avatar-selection">
+        <label for="avatarSelect">Choose an Avatar:</label>
+        <select id="avatarSelect">
+            <option value="/images/avatar1.png">Avatar 1</option>
+            <option value="/images/avatar2.png">Avatar 2</option>
+            <option value="/images/avatar3.png">Avatar 3</option>
+            <option value="/images/avatar4.png">Avatar 4</option>
+        </select>
+    </div>
+
+    <!-- Notification element -->
+    <div id="notification" class="notification"></div>
+
+
+  <!-- Fixed active users count in the top-right corner -->
+  <div id="active-users" style="position: fixed; top: 10px; right: 10px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px; border-radius: 5px;">
+    Active Users: 0
+</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
 
     <script src="/js/script.js"></script>
